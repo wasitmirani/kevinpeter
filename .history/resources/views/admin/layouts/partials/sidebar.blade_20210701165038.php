@@ -233,10 +233,10 @@
                 </a>
                 <ul>
                     <li>
-                        <a href="{{route('admin.course')}}" @php request()->route()->getName()=="admin.course" ? "active" : " " @endphp>List</a>
+                        <a href="{{route('admin.course')}}" request()->route()->getName()=="admin.course" ? active : ">List</a>
                     </li>
                     <li>
-                        <a href="{{route('admin.course.create')}}" @php request()->route()->getName()=="admin.course.create" ? "active" : ""  @endphp>Add Course</a>
+                        <a href="{{route('admin.course.create')}}" request()->route()->getName()=="admin.course.create" ? active : ">Add Course</a>
                     </li>
                 </ul>
             </li>
@@ -249,7 +249,7 @@
                 </a>
                 <ul>
                     <li>
-                        <a href="{{route('admin.teachers')}}" @php request()->route()->getName()=="admin.teachers" ? "active" : " " @endphp> List</a>
+                        <a href="{{route('admin.teachers')}}" request()->route()->getName()=="admin.teachers" ? active : "> List</a>
                     </li>
                     <li>
                         <a href="order-detail.html">Detail</a>
@@ -265,7 +265,7 @@
                 </a>
                 <ul>
                     <li>
-                        <a href="{{route('admin.students')}}" @php  request()->route()->getName()=="admin.students" ? "active" :" " @endphp>List</a>
+                        <a href="{{route('admin.students')}}" @php request()->route()->getName()=="admin.students" ? active :"" >List</a>
                     </li>
                     <li>
                         <a href="order-detail.html">Detail</a>

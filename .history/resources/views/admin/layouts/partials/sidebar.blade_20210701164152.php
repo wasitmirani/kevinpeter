@@ -196,8 +196,8 @@
                     <img src="{{asset('assets/images/user/man_avatar3.jpg')}}" class="rounded-circle" alt="image">
                 </div>
                 <div>
-                    <div class="fw-bold">{{Auth::user()->name}}</div>
-                    <small class="text-muted">Admin</small>
+                    <div class="fw-bold">Timotheus Bendan</div>
+                    <small class="text-muted">Sales Manager</small>
                 </div>
             </a>
             <div class="dropdown-menu dropdown-menu-end">
@@ -233,10 +233,10 @@
                 </a>
                 <ul>
                     <li>
-                        <a href="{{route('admin.course')}}" @php request()->route()->getName()=="admin.course" ? "active" : " " @endphp>List</a>
+                        <a href="{{route('admin.course')}}">List</a>
                     </li>
                     <li>
-                        <a href="{{route('admin.course.create')}}" @php request()->route()->getName()=="admin.course.create" ? "active" : ""  @endphp>Add Course</a>
+                        <a href="{{route('admin.course.create')}}">Add Course</a>
                     </li>
                 </ul>
             </li>
@@ -249,7 +249,7 @@
                 </a>
                 <ul>
                     <li>
-                        <a href="{{route('admin.teachers')}}" @php request()->route()->getName()=="admin.teachers" ? "active" : " " @endphp> List</a>
+                        <a href="{{route('admin.teachers')}}">List</a>
                     </li>
                     <li>
                         <a href="order-detail.html">Detail</a>
@@ -265,7 +265,7 @@
                 </a>
                 <ul>
                     <li>
-                        <a href="{{route('admin.students')}}" @php  request()->route()->getName()=="admin.students" ? "active" :" " @endphp>List</a>
+                        <a href="{{route('admin.students')}}">List</a>
                     </li>
                     <li>
                         <a href="order-detail.html">Detail</a>

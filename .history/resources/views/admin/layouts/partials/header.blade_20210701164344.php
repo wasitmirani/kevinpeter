@@ -92,9 +92,9 @@
                 </div>
             </li>
             <li class="nav-item ms-3">
-                    <a href="{{route('admin.course.create')}}" class="btn btn-primary btn-icon">
+                    <button class="btn btn-primary btn-icon">
         <i class="bi bi-plus-circle"></i> Add Course
-    </a>
+    </button>
             </li>
         </ul>
     </div>
