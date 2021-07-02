@@ -259,7 +259,7 @@
             <li>
                 <a href="#">
                     <span class="nav-link-icon">
-                        <i class="fas fa-user-graduate"></i>
+                        <i class="bi bi-receipt"></i>
                     </span>
                     <span>Students</span>
                 </a>
@@ -280,7 +280,7 @@
                           document.getElementById('logout-form').submit();">
 
                 <span class="nav-link-icon">
-                    <i class="fas fa-sign-out-alt"></i>
+                    <i class="bi bi-receipt"></i>
                 </span>
                 <span>   {{ __('Logout') }}</span>
             </a>

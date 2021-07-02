@@ -219,7 +219,7 @@
           <li>
                 <a class="active" href="index.html">
                     <span class="nav-link-icon">
-                        <i class="fas fa-tachometer-alt"></i>
+                        <i class="fa fa-bar"></i>
                     </span>
                     <span>Dashboard</span>
                 </a>
@@ -227,7 +227,7 @@
             <li>
                 <a href="#">
                     <span class="nav-link-icon">
-                        <i class="fab fa-discourse"></i>
+                        <i class="bi bi-receipt"></i>
                     </span>
                     <span>Courses</span>
                 </a>
@@ -243,7 +243,7 @@
             <li>
                 <a href="#">
                     <span class="nav-link-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
+                        <i class="bi bi-receipt"></i>
                     </span>
                     <span>Teachers</span>
                 </a>
@@ -259,7 +259,7 @@
             <li>
                 <a href="#">
                     <span class="nav-link-icon">
-                        <i class="fas fa-user-graduate"></i>
+                        <i class="bi bi-receipt"></i>
                     </span>
                     <span>Students</span>
                 </a>
@@ -280,7 +280,7 @@
                           document.getElementById('logout-form').submit();">
 
                 <span class="nav-link-icon">
-                    <i class="fas fa-sign-out-alt"></i>
+                    <i class="bi bi-receipt"></i>
                 </span>
                 <span>   {{ __('Logout') }}</span>
             </a>
