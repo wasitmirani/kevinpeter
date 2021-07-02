@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Models\User;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class CourseController extends Controller
+{
+    public function index(){
+
+
+
+        return view('admin.pages.courses.index');
+    }
+
+    public function create(){
+        $teachers = User::where('role_id',3)->get();
+
+        return view('admin.pages.courses.add',['teachers',$teachers]);
+    }
+
+
+    public function store(Request $request){
+        dd($request);
+    }
+}

@@ -1,0 +1,93 @@
+@extends('admin.layouts.app')
+@section('content')
+<div>
+    <h3>Course</h3>
+</div>
+<div id="message">
+
+</div>
+<form class="row g-3" @if(isset($course)) id="editCourseForm"  @else id="addCourseForm" @endif  enctype="multipart/form-data" >
+    @csrf
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Title</label>
+
+      <input type="text" name="title" class="form-control"   @if(isset($course)) value="{{$course->course_title}}" @endif id="inputEmail4">
+
+
+
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Teacher</label>
+      <select class="form-control" name="teacher">
+          <option value=" ">Teacher  Name</option>
+          @foreach($teachers as $teacher)
+          <option @if(isset($course->teacher_id) ==  $teacher->id) selected @endif value="{{$teacher->id}}">{{$teacher->name}}</option>
+          @endforeach
+
+      </select>
+    </div>
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Price</label>
+        <input type="number" name="price" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Image</label>
+        <input type="file" class="form-control" name="image">
+      </div>
+    <div class="col-12">
+      <label for="inputAddress2" class="form-label">Description</label>
+      <textarea id="editor" name="description">
+
+    </textarea>
+
+    </div>
+
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Add Course</button>
+    </div>
+  </form>
+  @endsection
+@section('scripts')
+<script>
+    ClassicEditor.create(document.querySelector('#editor'))
+
+    $(document).ready(function(){
+        $.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+        $('#addCourseForm').on('submit',function(e){
+            e.preventDefault()
+            var data = new FormData(this);
+            console.log(data)
+            $.ajax({
+                url:'/admin/course/store',
+                type:'POST',
+                data: data,
+                processData: false,
+                contentType: false,
+                success:function(mesage){
+                    $('#message').fadeIn().append("<p class='alert alert-warning alert-dismissible fade show'>"+mesage+"<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button><p>");
+
+                 },
+                 error:function(err){
+
+                     if (err.status == 422) {
+                        var errors = err.responseJSON.errors
+                        $('#message').empty()
+                           jQuery.each(errors, (index, item) => {
+
+                           $('#message').fadeIn().append("<p class='alert alert-warning alert-dismissible fade show'>"+item+"<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button><p>");
+
+         });
+                     }
+
+                 }
+            })
+
+        })
+    })
+</script>
+@endsection
