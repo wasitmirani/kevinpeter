@@ -197,16 +197,7 @@
                 </div>
                 <div>
                     <div class="fw-bold">{{Auth::user()->name}}</div>
-                    @if (Auth::user()->role_id == '1')
                     <small class="text-muted">Admin</small>
-                    @endif
-                    @if (Auth::user()->role_id == '2')
-                    <small class="text-muted">Student</small>
-                    @endif
-                    @if (Auth::user()->role_id == '3')
-                    <small class="text-muted">Teacher</small>
-                    @endif
-
                 </div>
             </a>
             <div class="dropdown-menu dropdown-menu-end">
@@ -287,7 +278,7 @@
         @endif
         @if (Auth::user()->role_id == '2')
         <li>
-            <a href="{{route('admin.course.list')}}">
+            <a href="#">
                 <span class="nav-link-icon">
                     <i class="fab fa-discourse"></i>
                 </span>
@@ -302,7 +293,7 @@
             </ul>
         </li>
         <li>
-            <a href="{{route('admin.course.list')}}">
+            <a href="#">
                 <span class="nav-link-icon">
                     <i class="fab fa-discourse"></i>
                 </span>

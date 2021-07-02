@@ -15,7 +15,9 @@ class StudentController extends Controller
     }
 
     public function show($id){
-        $student = User::where([['role_id','=',2],['id','=',$id]])->latest()->get();
-        return view('admin.pages.students.show',compact('student'));
-}
+        $students = User::where([['role_id','=',2],['id','=',$id]])->latest()->get();
+
+
+
+    }
 }

@@ -7,7 +7,6 @@ use App\Models\Course;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 
 class CourseController extends Controller
 {
@@ -23,7 +22,7 @@ class CourseController extends Controller
         }
 
         if(Auth::user()->role_id == '3') {
-            $courses = Course::with('teachers')->where('id','=',Auth::user()->id)->orderby('id','desc')->get();
+            $courses = Course::with('teachers')->orderby('id','desc')->get();
 
         }
 

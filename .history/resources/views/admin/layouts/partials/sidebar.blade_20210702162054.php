@@ -287,7 +287,7 @@
         @endif
         @if (Auth::user()->role_id == '2')
         <li>
-            <a href="{{route('admin.course.list')}}">
+            <a href="#">
                 <span class="nav-link-icon">
                     <i class="fab fa-discourse"></i>
                 </span>
@@ -302,7 +302,7 @@
             </ul>
         </li>
         <li>
-            <a href="{{route('admin.course.list')}}">
+            <a href="#">
                 <span class="nav-link-icon">
                     <i class="fab fa-discourse"></i>
                 </span>

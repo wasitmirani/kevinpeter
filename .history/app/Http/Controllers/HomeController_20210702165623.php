@@ -31,11 +31,9 @@ class HomeController extends Controller
         $courses = Course::with('teachers')->get();
         $totalTeacher = User::where('role_id','3')->count();
         $totalStudent = User::where('role_id','2')->count();
-
         $totalCourses = Course::all()->count();
 
-        return view('home',compact('teachers','courses','totalTeacher','totalStudent','totalCourses'));
-
+            return view('home',compact('teachers','courses'));
 
     }
 

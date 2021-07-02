@@ -34,8 +34,7 @@ class HomeController extends Controller
 
         $totalCourses = Course::all()->count();
 
-        return view('home',compact('teachers','courses','totalTeacher','totalStudent','totalCourses'));
-
+            return view('home',compact('teachers','courses'));
 
     }
 

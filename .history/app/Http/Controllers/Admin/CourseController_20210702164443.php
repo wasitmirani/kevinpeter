@@ -22,7 +22,7 @@ class CourseController extends Controller
 
         }
 
-        if(Auth::user()->role_id == '3') {
+        if(Auth::user()->role_id == 3) {
             $courses = Course::with('teachers')->where('id','=',Auth::user()->id)->orderby('id','desc')->get();
 
         }

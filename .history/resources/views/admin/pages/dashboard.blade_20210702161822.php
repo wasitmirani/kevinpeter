@@ -16,10 +16,3 @@
 @endif
 
 @endsection
-@section('scripts')
-<script>
-    $('#datatable-example').DataTable({
-    responsive: true
-});
-</script>
-@endsection
