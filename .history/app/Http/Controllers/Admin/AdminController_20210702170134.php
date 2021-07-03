@@ -32,6 +32,6 @@ class AdminController extends Controller
 
         $user = Auth::user();
 
-        return view('admin.pages.profile',['user'=>$user]);
+        return view('admin.pages.profile');
     }
 }
