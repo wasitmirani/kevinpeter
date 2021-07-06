@@ -1,0 +1,417 @@
+
+<!-- ./ notifications sidebar -->
+
+<!-- settings sidebar -->
+<div class="sidebar" id="settings">
+    <div class="sidebar-header">
+        <div>
+            <i class="bi bi-gear me-2"></i>
+            Settings
+        </div>
+        <button data-sidebar-close="">
+            <i class="bi bi-arrow-right"></i>
+        </button>
+    </div>
+    <div class="sidebar-content">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item px-0 border-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" checked="">
+                    <label class="form-check-label" for="flexCheckDefault1">
+                        Remember next visits
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item px-0 border-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" checked="">
+                    <label class="form-check-label" for="flexCheckDefault2">
+                        Enable report generation.
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item px-0 border-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" checked="">
+                    <label class="form-check-label" for="flexCheckDefault3">
+                        Allow notifications.
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item px-0 border-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+                    <label class="form-check-label" for="flexCheckDefault4">
+                        Hide user requests
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item px-0 border-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5" checked="">
+                    <label class="form-check-label" for="flexCheckDefault5">
+                        Speed up demands
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item px-0 border-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Hide menus
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="sidebar-action">
+        <a href="#" class="btn btn-primary">All Settings</a>
+    </div>
+</div>
+<!-- ./ settings sidebar -->
+
+<!-- search sidebar -->
+<div class="sidebar" id="search">
+    <div class="sidebar-header">
+        Search
+        <button data-sidebar-close="">
+            <i class="bi bi-arrow-right"></i>
+        </button>
+    </div>
+    <div class="sidebar-content">
+        <form class="mb-4">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search" aria-describedby="button-search-addon">
+                <button class="btn btn-outline-light" type="button" id="button-search-addon">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </form>
+        <h6 class="mb-3">Last searched</h6>
+        <div class="mb-4">
+            <div class="d-flex align-items-center mb-3">
+                <a href="#" class="avatar avatar-sm me-3">
+                        <span class="avatar-text rounded-circle">
+                            <i class="bi bi-search"></i>
+                        </span>
+                </a>
+                <a href="#" class="flex-fill">Reports for 2021</a>
+                <a href="#" class="btn text-danger btn-sm" data-bs-toggle="tooltip" title="Remove">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <a href="#" class="avatar avatar-sm me-3">
+                        <span class="avatar-text rounded-circle">
+                            <i class="bi bi-search"></i>
+                        </span>
+                </a>
+                <a href="#" class="flex-fill">Current users</a>
+                <a href="#" class="btn" data-bs-toggle="tooltip" title="Remove">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <a href="#" class="avatar avatar-sm me-3">
+                        <span class="avatar-text rounded-circle">
+                            <i class="bi bi-search"></i>
+                        </span>
+                </a>
+                <a href="#" class="flex-fill">Meeting notes</a>
+                <a href="#" class="btn" data-bs-toggle="tooltip" title="Remove">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+        </div>
+        <h6 class="mb-3">Recently viewed</h6>
+        <div class="mb-4">
+            <div class="d-flex align-items-center mb-3">
+                <a href="#" class="avatar avatar-secondary avatar-sm me-3">
+                        <span class="avatar-text rounded-circle">
+                            <i class="bi bi-check-circle"></i>
+                        </span>
+                </a>
+                <a href="#" class="flex-fill">Todo list</a>
+                <a href="#" class="btn" data-bs-toggle="tooltip" title="Remove">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <a href="#" class="avatar avatar-warning avatar-sm me-3">
+                        <span class="avatar-text rounded-circle">
+                            <i class="bi bi-wallet2"></i>
+                        </span>
+                </a>
+                <a href="#" class="flex-fill">Pricing table</a>
+                <a href="#" class="btn" data-bs-toggle="tooltip" title="Remove">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <a href="#" class="avatar avatar-info avatar-sm me-3">
+                        <span class="avatar-text rounded-circle">
+                            <i class="bi bi-gear"></i>
+                        </span>
+                </a>
+                <a href="#" class="flex-fill">Settings</a>
+                <a href="#" class="btn" data-bs-toggle="tooltip" title="Remove">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <a href="#" class="avatar avatar-success avatar-sm me-3">
+                        <span class="avatar-text rounded-circle">
+                            <i class="bi bi-person-circle"></i>
+                        </span>
+                </a>
+                <a href="#" class="flex-fill">Users</a>
+                <a href="#" class="btn" data-bs-toggle="tooltip" title="Remove">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-action">
+        <a href="#" class="btn btn-danger">All Clear</a>
+    </div>
+</div>
+<!-- ./ search sidebar -->
+
+<!-- ./ sidebars -->
+
+<!-- menu -->
+<div class="menu">
+    <div class="menu-header">
+        <a href="index.html" class="menu-header-logo">
+            <img src="{{asset('assets/images/logo.png')}}" alt="logo">
+        </a>
+        <a href="index.html" class="btn btn-sm menu-close-btn">
+            <i class="bi bi-x"></i>
+        </a>
+    </div>
+    <div class="menu-body">
+        <div class="dropdown">
+            <a href="#" class="d-flex align-items-center" data-bs-toggle="dropdown">
+                <div class="avatar me-3">
+                    @if (Auth::user()->id != null)
+                    <img src="{{asset('assets/images/user/'.Auth::user()->image)}}" class="rounded-circle" alt="image">
+                    @else
+                    <img src="{{asset('assets/images/user/man_avatar3.jpg')}}" class="rounded-circle" alt="image">
+
+                    @endif
+
+                </div>
+                <div>
+                    <div class="fw-bold">{{Auth::user()->name}}</div>
+                    @if (Auth::user()->role_id == '1')
+                    <small class="text-muted">Admin</small>
+                    @endif
+                    @if (Auth::user()->role_id == '2')
+                    <small class="text-muted">Student</small>
+                    @endif
+                    @if (Auth::user()->role_id == '3')
+                    <small class="text-muted">Teacher</small>
+                    @endif
+
+                </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end">
+                <a href="#" class="dropdown-item d-flex align-items-center">
+                    <i class="bi bi-person dropdown-item-icon"></i> Profile
+                </a>
+                <a href="#" class="dropdown-item d-flex align-items-center">
+                    <i class="bi bi-envelope dropdown-item-icon"></i> Inbox
+                </a>
+                <a href="#" class="dropdown-item d-flex align-items-center" data-sidebar-target="#settings">
+                    <i class="bi bi-gear dropdown-item-icon"></i> Settings
+                </a>
+                <a href="login.html" class="dropdown-item d-flex align-items-center text-danger" target="_blank">
+                    <i class="bi bi-box-arrow-right dropdown-item-icon"></i> Logout
+                </a>
+            </div>
+        </div>
+        <ul>
+
+          <li>
+                <a class="@php request()->route()->getName()=="admin.dashboard" ? "active" : " " @endphp" href="{{route('admin.dashboard')}}">
+                    <span class="nav-link-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            @if(Auth::user()->role_id == '1')
+            <li>
+                <a href="#">
+                    <span class="nav-link-icon">
+                        <i class="fab fa-discourse"></i>
+                    </span>
+                    <span>Courses</span>
+                    {{request()->route()->getName()}}
+                </a>
+                <ul>
+                    <li>
+                        <a href="{{route('admin.course.list')}}" class='@php request()->route()->getName()=="admin.course.list" ? "active" : " " @endphp'>List</a>
+                    </li>
+                    <li>
+                        <a href="{{route('admin.course.create')}}" class='@php request()->route()->getName()=="admin.course.create" ? "active" : ""  @endphp' >Add Course</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="nav-link-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </span>
+                    <span>Teachers</span>
+                </a>
+                <ul>
+                    <li>
+                        <a href="{{route('admin.teachers')}}" class='@php request()->route()->getName()=="admin.teachers" ? "active" : " " @endphp'> List</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="nav-link-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </span>
+                    <span>Students</span>
+                </a>
+                <ul>
+                    <li>
+                        <a href="{{route('admin.students')}}" class='@php  request()->route()->getName()=="admin.students" ? "active" :" " @endphp'>List</a>
+                    </li>
+                    <li>
+
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="{{route('admin.enrollments')}}">
+                    <span class="nav-link-icon">
+                        <i class="far fa-address-book"></i>
+                    </span>
+                    <span>Enrollments</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="#">
+                    <span class="nav-link-icon">
+                        <i class="fas fa-external-link-alt"></i>
+                    </span>
+                    <span>Category</span>
+                </a>
+                <ul>
+                    <li>
+                        <a href="{{route('admin.categories')}}" class=' @php request()->route()->getName()=="admin.categories" ? "active" : " " @endphp'> List</a>
+                    </li>
+                    <li>
+                        <a href="{{route('admin.categories.create')}}" class='@php request()->route()->getName()=="admin.categories" ? "active" : " " @endphp' >Add</a>
+                    </li>
+                </ul>
+            </li>
+        </li>
+        @endif
+        @if (Auth::user()->role_id == '2')
+        <li>
+            <a href="{{route('admin.course.list')}}">
+                <span class="nav-link-icon">
+                    <i class="fab fa-discourse"></i>
+                </span>
+                <span>My Courses</span>
+            </a>
+            <ul>
+                <li>
+                    <a href="{{route('student.course.my.courses')}}" @php request()->route()->getName()=="admin.course" ? "active" : " " @endphp>Courses List</a>
+                </li>
+
+
+            </ul>
+        </li>
+        <li>
+            <a href="{{route('admin.course.list')}}">
+                <span class="nav-link-icon">
+                    <i class="fab fa-discourse"></i>
+                </span>
+                <span>New Courses</span>
+            </a>
+            <ul>
+                <li>
+                    <a href="{{route('student.course.list')}}" @php request()->route()->getName()=="admin.course" ? "active" : " " @endphp>Courses</a>
+                </li>
+
+
+            </ul>
+        </li>
+
+        @endif
+        @if (Auth::user()->role_id == '3')
+        <li>
+            <a href="#">
+                <span class="nav-link-icon">
+                    <i class="fab fa-discourse"></i>
+                </span>
+                <span>My Courses</span>
+            </a>
+            <ul>
+                <li>
+                    <a href="{{route('teacher.course.list')}}" @php request()->route()->getName()=="admin.course" ? "active" : " " @endphp>My Courses List</a>
+                </li>
+                <li>
+                    <a href="{{route('teacher.course.create')}}" @php request()->route()->getName()=="admin.course.create" ? "active" : ""  @endphp>Add Course</a>
+                </li>
+
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <span class="nav-link-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </span>
+                <span>My Students</span>
+            </a>
+            <ul>
+                <li>
+                    <a href="{{route('teacher.student.list')}}" @php  request()->route()->getName()=="admin.students" ? "active" :" " @endphp>List</a>
+                </li>
+                <li>
+
+                </li>
+            </ul>
+        </li>
+
+        @endif
+
+        <li>
+
+            <a href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+
+                <span class="nav-link-icon">
+                    <i class="fas fa-sign-out-alt"></i>
+                </span>
+                <span>   {{ __('Logout') }}</span>
+            </a>
+
+
+             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                 @csrf
+             </form>
+            </li>
+
+
+
+
+
+
+
+
+
+
+        </ul>
+    </div>
+</div>
