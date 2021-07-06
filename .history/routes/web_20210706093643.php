@@ -105,7 +105,7 @@ Route::middleware(['auth'])->prefix('student')->name('student.')->group(function
 
         //student course
 
-        Route::get('my/courses',[App\Http\Controllers\Student\CourseController::class,'myCourses'])->name('my.courses');
+        Route::get('my/courses',,[App\Http\Controllers\Student\CourseController::class,'myCourses']);
 
 
     });

@@ -67,11 +67,11 @@
                             </a>
                             <div class="d-flex gap-3 mb-3 align-items-center">
                                 <p class="text-muted">Teacher: <span>{{$course->teachers->name}}</span></p>
-                                <h4 class="mb-0">Price: ${{$course->price}}</h4>
+                                <h4 class="mb-0">${{$course->price}}</h4>
                             </div>
 
                             <div class="d-flex">
-                                <a href="{{route('student.course.enroll.form',$course->id)}}" class="btn btn-primary">Enroll Now</a>
+                                <a href="#" class="btn btn-primary">Enroll Now</a>
                                 <a href="#" class="btn ms-auto">
                                     <i class="bi bi-heart"></i>
                                 </a>

@@ -46,7 +46,7 @@
             var id = $(this).data('id');
 
             $.ajax({
-                url:"student/course/enroll",
+                url:"",
                 type:"POST",
                 data:{
                     name : name,

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Student;
 
 use App\Models\Course;
-use App\Models\Enrollment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -30,11 +29,11 @@ class CourseController extends Controller
  public function enrollment(Request $request){
 
     $validate = $request->validate([
-        'name' => ['required'],
+        'name' => ['required',
         'teacher' => ['required'],
         'price' => ['required'],
         'category' => ['required'],
-        'title' => ['required'],
+        'title' => ['required']
     ]);
 
     $enrollment = Enrollment::create([

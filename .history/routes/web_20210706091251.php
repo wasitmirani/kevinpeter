@@ -99,13 +99,9 @@ Route::middleware(['auth'])->prefix('student')->name('student.')->group(function
     Route::name('course')->group(function(){
 
         Route::get('courses',[App\Http\Controllers\Student\CourseController::class,'courses'])->name('.list');
+
         Route::get('course/enroll/form/{id}',[App\Http\Controllers\Student\CourseController::class,'enrollmentForm'])->name('.enroll.form');
         Route::post('course/enroll',[App\Http\Controllers\Student\CourseController::class,'enrollment'])->name('.enroll');
-
-
-        //student course
-
-        Route::get('my/courses',[App\Http\Controllers\Student\CourseController::class,'myCourses'])->name('my.courses');
 
 
     });

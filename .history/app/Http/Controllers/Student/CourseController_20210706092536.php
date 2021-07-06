@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Student;
 
 use App\Models\Course;
-use App\Models\Enrollment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -30,30 +29,12 @@ class CourseController extends Controller
  public function enrollment(Request $request){
 
     $validate = $request->validate([
-        'name' => ['required'],
+        'course' => ['required',
         'teacher' => ['required'],
         'price' => ['required'],
         'category' => ['required'],
-        'title' => ['required'],
+        'title' => ['required']
     ]);
-
-    $enrollment = Enrollment::create([
-        'course_title' => $request->title,
-        'student_name' => $request->name,
-        'teacher' => $request->teacher,
-        'price' => $request->price,
-        'category' => $request->category
-
-    ]);
-
-    if($enrollment){
-
-        return response()->json('You are enroll now');
-
-    }else{
-        return response()->json('Failed To Enroll');
-    }
-
 
 
  }

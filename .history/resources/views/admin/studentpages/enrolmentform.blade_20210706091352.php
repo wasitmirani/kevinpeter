@@ -2,7 +2,6 @@
 @section('content')
 <h4>Enrolment Form</h4>
 <div class="card-body">
-    <div id="message"></div>
     <form>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Student Name</label>
@@ -11,7 +10,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Course Title</label>
-            <input type="text" class="form-control" id="title" value="{{$course->course_title}}">
+            <input type="password" class="form-control" id="title" value="{{$course->course_title}}">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Teacher Name</label>
@@ -46,33 +45,13 @@
             var id = $(this).data('id');
 
             $.ajax({
-                url:"student/course/enroll",
+                url:"",
                 type:"POST",
                 data:{
                     name : name,
                     title:title,
                     teacher: teacher,
                     category: category,
-                    price: price,
-                    id : id
-
-                },
-                success:function(msg){
-                    $('#message').fadeIn().append("<p class='alert alert-warning alert-dismissible fade show'>"+msg+"<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button><p>");
-
-
-
-                },
-                error:function(err){
-                    if (err.status == 422) {
-                        var errors = err.responseJSON.errors
-                        $('#message').empty()
-                           jQuery.each(errors, (index, item) => {
-
-                           $('#message').fadeIn().append("<p class='alert alert-warning alert-dismissible fade show'>"+item+"<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button><p>");
-
-         });
-                     }
 
                 }
             })

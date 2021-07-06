@@ -71,7 +71,7 @@
                             </div>
 
                             <div class="d-flex">
-                                <a href="{{route('student.course.enroll.form',$course->id)}}" class="btn btn-primary">Enroll Now</a>
+                                <a href="#" class="btn btn-primary">Enroll Now</a>
                                 <a href="#" class="btn ms-auto">
                                     <i class="bi bi-heart"></i>
                                 </a>
