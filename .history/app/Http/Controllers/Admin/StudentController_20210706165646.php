@@ -38,7 +38,6 @@ public function updateStudent(Request $request){
 
 
     $id = $request->id;
-    $student = User::where('id', $id)->first();
     if ($request->hasfile('image')) {
         $name = !empty($request->title) ? $request->title : config('app.name');
 
@@ -48,7 +47,7 @@ public function updateStudent(Request $request){
 
 
     }
-
+    $student = User::where('id', $id)->first();
     $student->name = $request->name;
     $student->email = $request->email;
 

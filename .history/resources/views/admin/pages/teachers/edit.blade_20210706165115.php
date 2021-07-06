@@ -17,15 +17,7 @@
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Speciality</label>
-            <select class="form-control" name="category">
-                <option value="">Select Speciality</option>
-                @foreach ($categories as $category)
-                <option value="{{$category->id}}">{{$category->category}}</option>
-
-                @endforeach
-
-            </select>
-
+            <input type="text" class="form-control" name="category" aria-describedby="emailHelp" value="{{$teacher->category}}">
 
           </div>
           <div class="mb-3">

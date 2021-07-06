@@ -61,7 +61,7 @@ class TeacherController extends Controller
         $teacher->name = $request->name;
         $teacher->email = $request->email;
 
-        $teacher->category_id = $request->category;
+        $teacher->image = $request->category;
         if( $teacher->save()){
 
             return response()->json('Teacher Record Updated Successfully');

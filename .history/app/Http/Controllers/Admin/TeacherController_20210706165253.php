@@ -46,22 +46,20 @@ class TeacherController extends Controller
 
 
         $id = $request->id;
-        $teacher = User::where('id', $id)->first();
         if ($request->hasfile('image')) {
             $name = !empty($request->title) ? $request->title : config('app.name');
 
             $name = Str::slug($name, '-')  . "-" . time() . '.' . $request->image->extension();
             $request->image->move(public_path("/assets/images/user/"), $name);
-            $teacher->image = $name;
 
 
         }
-
+        $teacher = User::where('id', $id)->first();
 
         $teacher->name = $request->name;
         $teacher->email = $request->email;
-
-        $teacher->category_id = $request->category;
+        $teacher->image = $name;
+        $teacher->image = $request->category;
         if( $teacher->save()){
 
             return response()->json('Teacher Record Updated Successfully');
