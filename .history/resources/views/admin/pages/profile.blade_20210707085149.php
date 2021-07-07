@@ -195,7 +195,12 @@
 
          });
                      }
+                     if(err.status == 500){
+                        var errors = err.responseJSON.message;
+                        console.log(errors)
 
+
+                     }
 
 
             }

@@ -10,7 +10,7 @@
                 <small>Student</small>
             </div>
             <div class="ms-md-auto">
-                <a href="{{route('admin.profile')}}" class="btn btn-primary btn-lg btn-icon">
+                <a href="settings.html" class="btn btn-primary btn-lg btn-icon">
                     <i class="bi bi-pencil small"></i> Edit Account
                 </a>
             </div>

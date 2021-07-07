@@ -15,10 +15,9 @@
         @foreach($teachers as $teacher)
       <tr>
         <td>{{$teacher->name}}</td>
-        <td>{{$teacher->ctegory}}</td>
+        <td>System Architect</td>
 
         <td>{{$teacher->email}}</td>
-        <td><img class="img-thumbnail" src="{{asset('assets/images/user/'.$teacher->image)}}" style="width: 40px; height:20"></td>
         <td>
             <a href="{{route('admin.teachers.edit',$teacher->id)}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
             <a type="button" class="dltTeacherBtn" data-id="{{$teacher->id}}"><i class="fa fa-trash" aria-hidden="true"></i></a>

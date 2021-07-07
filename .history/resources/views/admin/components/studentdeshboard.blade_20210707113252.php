@@ -1,6 +1,6 @@
 <div class="content ">
 
-    <div class="buyer-profile-cover bg-image mb-4" data-image="">
+    <div class="buyer-profile-cover bg-image mb-4" data-image="{{}}">
         <div class="container d-flex align-items-center justify-content-center h-100 flex-column flex-md-row text-center text-md-start">
             <div class="avatar avatar-xl me-3">
                 <img src="{{asset('assets/images/user/'.Auth::user()->image)}}" class="rounded-circle" alt="...">
@@ -10,7 +10,7 @@
                 <small>Student</small>
             </div>
             <div class="ms-md-auto">
-                <a href="{{route('admin.profile')}}" class="btn btn-primary btn-lg btn-icon">
+                <a href="settings.html" class="btn btn-primary btn-lg btn-icon">
                     <i class="bi bi-pencil small"></i> Edit Account
                 </a>
             </div>

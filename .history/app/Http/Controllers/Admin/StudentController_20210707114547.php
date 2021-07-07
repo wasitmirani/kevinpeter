@@ -36,6 +36,9 @@ public function edit($id){
 
 public function updateStudent(Request $request){
 
+
+
+
     $id = $request->id;
     $student = User::where('id', $id)->first();
     if ($request->hasfile('image')) {

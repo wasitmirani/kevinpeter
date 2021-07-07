@@ -186,16 +186,14 @@
             },
             error:function(err){
                 if (err.status == 422) {
-                    console.log(err.responseJSON)
                         var errors = err.responseJSON.errors
                         $('#message').empty()
                            jQuery.each(errors, (index, item) => {
 
-                           $('#message').fadeIn().append("<p class='alert alert-warning alert-dismissible fade show'>"+item+"<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button><p>");
+                           $('#passwordMessage').fadeIn().append("<p class='alert alert-warning alert-dismissible fade show'>"+item+"<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button><p>");
 
          });
                      }
-
 
 
             }

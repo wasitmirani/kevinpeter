@@ -42,13 +42,13 @@
 
                                 @endif
                                 @if (Auth::user()->role_id == '2')
-                                <a href="{{route('admin.students.edit',Auth::user()->id)}}" class="text-danger me-3" title="Remove">
+                                <a href="{{route('admin.students.update',Auth::user()->id)}}" class="text-danger me-3" title="Remove">
                                     <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<span>Profile</span>
 
                                 </a>
 
                                 @endif  @if (Auth::user()->role_id == '3')
-                                <a href="{{route('admin.teachers.edit'),Auth::user()->id }}" class="text-danger me-3" title="Remove">
+                                <a href="{{route('admin.teachers.update'),Auth::user()->id }}" class="text-danger me-3" title="Remove">
                                     <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<span>Profile</span>
 
                                 </a>

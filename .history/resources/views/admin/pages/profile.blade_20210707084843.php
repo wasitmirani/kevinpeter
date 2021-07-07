@@ -186,7 +186,6 @@
             },
             error:function(err){
                 if (err.status == 422) {
-                    console.log(err.responseJSON)
                         var errors = err.responseJSON.errors
                         $('#message').empty()
                            jQuery.each(errors, (index, item) => {
@@ -195,7 +194,6 @@
 
          });
                      }
-
 
 
             }

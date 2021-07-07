@@ -26,7 +26,7 @@ class TeacherController extends Controller
     public function show($id){
 
 
-        $teacher = User::where([['id','=',$id]])->first();
+        $teacher = User::where([['id','=',$id],['role_id','=','3']])->first();
         return view('admin.pages.teachers.show',compact('teacher'));
 
     }
