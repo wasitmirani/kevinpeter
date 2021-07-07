@@ -141,7 +141,7 @@
         <li>
             <a href="{{route('admin.course.list')}}">
                 <span class="nav-link-icon">
-                    <i class="fab fa-discourse"></i>
+                    <i class="fb fa-discourse"></i>
                 </span>
                 <span>My Courses</span>
             </a>
@@ -160,7 +160,7 @@
                 active
             @endif"'>
                 <span class="nav-link-icon">
-                    <i class="fas fa-book"></i>
+                    <i class="fab fa-discourse"></i>
                 </span>
                 <span>New Courses</span>
             </a>
@@ -173,17 +173,6 @@
 
 
             </ul>
-        </li>
-        <li>
-            <a href="{{route('admin.teachers.edit',Auth::user()->id )}}"  class='@if (request()->route()->getName()=="admin.teachers.edit")
-                active
-            @endif"'>
-                <span class="nav-link-icon">
-                    <i class="fas fa-user-alt"></i>
-                </span>
-                <span>Profile</span>
-            </a>
-
         </li>
 
         @endif

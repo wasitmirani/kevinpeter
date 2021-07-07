@@ -175,11 +175,11 @@
             </ul>
         </li>
         <li>
-            <a href="{{route('admin.teachers.edit',Auth::user()->id )}}"  class='@if (request()->route()->getName()=="admin.teachers.edit")
+            <a href="{{route('admin.course.list')}}"  class='@if (request()->route()->getName()=="admin.course.list")
                 active
             @endif"'>
                 <span class="nav-link-icon">
-                    <i class="fas fa-user-alt"></i>
+                    <i class="fas fa-book"></i>
                 </span>
                 <span>Profile</span>
             </a>

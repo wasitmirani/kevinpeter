@@ -24,10 +24,10 @@
         <div class="col-md-4">
             <div class="card bg-cyan text-white-90">
                 <div class="card-body d-flex align-items-center">
-                    <i class="fas fa-headphones display-7 me-3"></i>
+                    <i class="bi bi-box-seam display-7 me-3"></i>
                     <div>
                         <h4 class="mb-0">45</h4>
-                        <span>Total Students</span>
+                        <span>My Orders</span>
                     </div>
                 </div>
             </div>
@@ -35,10 +35,10 @@
         <div class="col-md-4">
             <div class="card bg-purple text-white-90">
                 <div class="card-body d-flex align-items-center">
-                    <i class="fa fa-heart display-7 me-3"></i>
+                    <i class="bi bi-heart display-7 me-3"></i>
                     <div>
-                        <h4 class="mb-0">{{$totalCourses}}</h4>
-                        <span>Total Courses</span>
+                        <h4 class="mb-0">5</h4>
+                        <span>My Wishlist</span>
                     </div>
                 </div>
             </div>
@@ -46,10 +46,10 @@
         <div class="col-md-4">
             <div class="card bg-teal text-white-90">
                 <div class="card-body d-flex align-items-center">
-                    <i class="fas fa-music display-7 me-3"></i>
+                    <i class="bi bi-wallet2 display-7 me-3"></i>
                     <div>
-                        <h4 class="mb-0">$</h4>
-                        <span>Classes</span>
+                        <h4 class="mb-0">$9,000</h4>
+                        <span>My Profit</span>
                     </div>
                 </div>
             </div>
@@ -98,13 +98,13 @@
                 <div class="card-body">
                     <ul class="nav nav-pills flex-column gap-2">
                         <li class="nav-item">
-                            <a class="nav-link  active " href="#buyer-dashboard.html">Dashboard</a>
+                            <a class="nav-link  active " href="buyer-dashboard.html">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#buyer-orders.html">My Courses</a>
+                            <a class="nav-link " href="buyer-orders.html">My Courses</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#buyer-addresses.html">My Teachers</a>
+                            <a class="nav-link " href="buyer-addresses.html">My Teachers</a>
                         </li>
 
                     </ul>

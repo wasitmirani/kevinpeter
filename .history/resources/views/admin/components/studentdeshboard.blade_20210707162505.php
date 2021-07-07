@@ -24,7 +24,7 @@
         <div class="col-md-4">
             <div class="card bg-cyan text-white-90">
                 <div class="card-body d-flex align-items-center">
-                    <i class="fas fa-headphones display-7 me-3"></i>
+                    <i class="bi bi-box-seam display-7 me-3"></i>
                     <div>
                         <h4 class="mb-0">45</h4>
                         <span>Total Students</span>
@@ -35,7 +35,7 @@
         <div class="col-md-4">
             <div class="card bg-purple text-white-90">
                 <div class="card-body d-flex align-items-center">
-                    <i class="fa fa-heart display-7 me-3"></i>
+                    <i class="bi bi-heart display-7 me-3"></i>
                     <div>
                         <h4 class="mb-0">{{$totalCourses}}</h4>
                         <span>Total Courses</span>
@@ -46,7 +46,7 @@
         <div class="col-md-4">
             <div class="card bg-teal text-white-90">
                 <div class="card-body d-flex align-items-center">
-                    <i class="fas fa-music display-7 me-3"></i>
+                    <i class="bi bi-wallet2 display-7 me-3"></i>
                     <div>
                         <h4 class="mb-0">$</h4>
                         <span>Classes</span>

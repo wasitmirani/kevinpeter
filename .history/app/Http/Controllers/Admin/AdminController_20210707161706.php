@@ -28,7 +28,7 @@ class AdminController extends Controller
 
             $courses = Course::with('teachers')->where('id','=',Auth::user()->id)->orderby('id','desc')->get();
             $totalCourses = count($courses);
-            return view('admin.pages.dashboard',compact('courses','totalCourses'));
+            return view('admin.pages.dashboard',compact('courses'));
         }
 
         if(Auth::user()->role_id == '3') {

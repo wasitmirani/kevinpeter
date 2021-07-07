@@ -179,7 +179,7 @@
                 active
             @endif"'>
                 <span class="nav-link-icon">
-                    <i class="fas fa-user-alt"></i>
+                    <i class="fas fa-book"></i>
                 </span>
                 <span>Profile</span>
             </a>

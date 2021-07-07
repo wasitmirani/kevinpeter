@@ -127,5 +127,5 @@ Route::middleware(['auth'])->prefix('student')->name('student.')->group(function
 });
 
 
-Route::get('contact',[App\Http\Controllers\HomeController::class,'contactUsPage'])->name('contact');
+Route::get('contact',[App\Http\Controllers\FrontendController::class,'contactUsPage'])->name('contact');
 

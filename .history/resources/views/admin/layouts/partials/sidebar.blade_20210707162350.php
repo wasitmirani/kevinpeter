@@ -174,17 +174,6 @@
 
             </ul>
         </li>
-        <li>
-            <a href="{{route('admin.teachers.edit',Auth::user()->id )}}"  class='@if (request()->route()->getName()=="admin.teachers.edit")
-                active
-            @endif"'>
-                <span class="nav-link-icon">
-                    <i class="fas fa-user-alt"></i>
-                </span>
-                <span>Profile</span>
-            </a>
-
-        </li>
 
         @endif
         @if (Auth::user()->role_id == '3')
