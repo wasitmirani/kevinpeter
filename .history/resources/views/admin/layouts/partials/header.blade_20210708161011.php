@@ -12,13 +12,13 @@
 
     <form class="search-form">
         <div class="input-group">
-            <button id="searchBtn"  class="btn btn-outline-light" type="button" id="button-addon1">
+            <button class="btn btn-outline-light" type="button" id="button-addon1">
 
-                <i class="fas fa-search" aria-hidden="true"></i>
+                <i class="fa fa-search" aria-hidden="true"></i>
             </button>
-            <input type="text" id="searchKeyword" class="form-control" placeholder="Search courses, students, teachers...." aria-label="Example text with button addon" aria-describedby="button-addon1">
-            <a type="button"class="btn btn-outline-light close-header-search-bar">
-                <i class="fas fa-search-plus"></i>
+            <input type="text" class="form-control" placeholder="Search courses, students, teachers...." aria-label="Example text with button addon" aria-describedby="button-addon1">
+            <a type="button" class="btn btn-outline-light close-header-search-bar">
+                <i class="bi bi-x"></i>
             </a>
         </div>
     </form>

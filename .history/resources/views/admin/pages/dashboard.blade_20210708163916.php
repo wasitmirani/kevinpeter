@@ -52,7 +52,6 @@ $(document).ready(function(){
 
         var searchKeyword = $("#searchKeyword").val();
 
-
         $.ajax({
             url:"/admin/search",
             type:"POST",
@@ -62,21 +61,9 @@ $(document).ready(function(){
             },
             success:function(msg){
 
-
-                if(msg != null){
-
-                 $("#dashboardContent").empty()
-
-jQuery.each(msg, (index, item) => {
-    $('#dashboardContent').fadeIn().append('<div class="col-lg-4 col-md-6"><div class="card border"><img class="card-img-top" src="/assets/images/user/'+item.image+'" alt="image"><div class="card-body"><h6 class="card-title">'+item.name+'</h6><p class="card-text">Some quick example text to build on the card title and make up...</p><a href="#" class="btn btn-primary">Read More</a></div></div></div>');
-
-})
-
-                }else{
-                    $('#dashboardContent').fadeIn().append('No Result Found');
-
-                }
-
+                jQuery.each(errors, (index, item) => {
+                    console.log(item)
+                })
 
 
 

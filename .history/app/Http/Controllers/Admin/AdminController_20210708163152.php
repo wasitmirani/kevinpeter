@@ -139,7 +139,7 @@ class AdminController extends Controller
     public function searchCourse(Request $request){
 
        $keyword = $request->keyword;
-       $result = User::where('name','=',$keyword)->get();
-       return response()->json($result);
+       $result = User::where('name','%',$keyword)->get();
+       dd($result);
     }
 }

@@ -28,7 +28,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::post('update/password',[App\Http\Controllers\Admin\AdminController::class,'updatePassword'])->name('update.password');
     Route::get('enrollments',[App\Http\Controllers\Admin\AdminController::class,'getEnrollments'])->name('enrollments');
 
-    Route::post('search',[App\Http\Controllers\Admin\AdminController::class,'searchCourse'])->name('search.course');
+    Route::post('search'[App\Http\Controllers\Admin\AdminController::class,'searchCourse'])->name('search.course');
 
 
 

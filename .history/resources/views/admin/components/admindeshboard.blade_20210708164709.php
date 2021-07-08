@@ -1,4 +1,4 @@
-<div class="row row-cols-1 row-cols-md-3 g-4" id="dashboardContent">
+<div class="row row-cols-1 row-cols-md-3 g-4" id="dashboard">
     <div class="col-lg-7 col-md-12">
         <div class="card widget h-100">
 

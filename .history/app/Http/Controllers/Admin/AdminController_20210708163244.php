@@ -140,6 +140,6 @@ class AdminController extends Controller
 
        $keyword = $request->keyword;
        $result = User::where('name','=',$keyword)->get();
-       return response()->json($result);
+       dd($result);
     }
 }
