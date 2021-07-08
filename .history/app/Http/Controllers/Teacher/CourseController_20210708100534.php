@@ -74,8 +74,8 @@ class CourseController extends Controller
 
     public function edit($id){
         $course = Course::where('id',$id)->first();
-        $categories = Category::all();
-
+        $categories = User::where('role_id',3)->get();
+        dd($categories);
 
         return view('admin.teacherpages.courses.create',compact('course','categories'));
 

@@ -29,6 +29,7 @@
     </div>
     <div class="col-md-6">
         <label for="inputPassword4" class="form-label">Category</label>
+        @if (isset($course))
         <select class="form-control" name="category">
             <option value=" ">Category Name</option>
             @foreach($categories as $category)
@@ -36,6 +37,17 @@
             @endforeach
 
         </select>
+        @else
+        <select class="form-control" name="category">
+            <option value=" ">Category Name</option>
+            @foreach($categories as $category)
+            <option value="{{$category->id}}">{{$category->category}}</option>
+            @endforeach
+
+        </select>
+
+        @endif
+
       </div>
     <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Price</label>

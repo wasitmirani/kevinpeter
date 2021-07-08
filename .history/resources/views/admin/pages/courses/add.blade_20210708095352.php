@@ -32,7 +32,7 @@
         <select class="form-control" name="category">
             <option value=" ">Category Name</option>
             @foreach($categories as $category)
-            <option @if(isset($course->category_id) ==  $category->id) selected @endif value="{{$category->id}}">{{$category->category}}</option>
+            <option @if(isset($course->category_id) ==  $category->id) selected @endif value="{{$category->id}}">{{$category->category->category}}</option>
             @endforeach
 
         </select>

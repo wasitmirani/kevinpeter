@@ -6,7 +6,7 @@
 <div id="message">
 
 </div>
-<form class="row g-3 dropzone" @if(isset($course)) id="editCourseForm"  @else id="addCourseForm" @endif  enctype="multipart/form-data">
+<form class="row g-3" @if(isset($course)) id="editCourseForm"  @else id="addCourseForm" @endif  enctype="multipart/form-data" >
     @csrf
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Title</label>
@@ -18,32 +18,37 @@
 
     </div>
     <div class="col-md-6">
-      <label for="inputPassword4" class="form-label">Teacher</label>
-      <select class="form-control" name="teacher">
-          <option value=" ">Teacher  Name</option>
-          @foreach($teachers as $teacher)
-          <option @if(isset($course->teacher_id) ==  $teacher->id) selected @endif value="{{$teacher->id}}">{{$teacher->name}}</option>
-          @endforeach
+      <label for="inputPassword4" class="form-label">Category</label>
+      @if (isset($course))
+      <select class="form-control select2-example" name="category">
+        <option value=" ">Category</option>
+        @foreach($categories as $category)
+        <option @if($course->category_id ==  $category->id) selected @endif value="{{$category->id}}"></option>
+        @endforeach
 
-      </select>
+    </select>
+    @else
+    <select class="form-control select2-example" name="category">
+        <option value=" ">Category</option>
+        @foreach($categories as $category)
+        <option @if(isset($course->category_id) ==  $category->id) selected @endif value="{{$category->id}}">{{$category->category}}</option>
+        @endforeach
+
+    </select>
+
+
+      @endif
+
+
+
     </div>
-    <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Category</label>
-        <select class="form-control" name="category">
-            <option value=" ">Category Name</option>
-            @foreach($categories as $category)
-            <option @if(isset($course->category_id) ==  $category->id) selected @endif value="{{$category->id}}">{{$category->category}}</option>
-            @endforeach
-
-        </select>
-      </div>
     <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Price</label>
         <input type="number" name="price" @if(isset($course)) value="{{$course->price}}" @endif class="form-control" id="inputEmail4">
       </div>
       <div class="col-md-6">
         <label for="inputPassword4" class="form-label">Image</label>
-        <input class="form-control" type="file" name="image">
+        <input type="file" class="form-control" name="image">
         @if(isset($course))
 
         <input type="hidden" name="oldImage" value="{{$course->image}}">
@@ -77,8 +82,12 @@
 @section('scripts')
 <script>
     ClassicEditor.create(document.querySelector('#editor'))
+    $('.select2-example').select2({
+    placeholder: 'Select'
+});
 
     $(document).ready(function(){
+        $("#addCourseForm").dropzone();
         $.ajaxSetup({
     headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -90,7 +99,7 @@
             var data = new FormData(this);
             console.log(data)
             $.ajax({
-                url:'/admin/course/store',
+                url:'/teacher/course/store',
                 type:'POST',
                 data: data,
                 processData: false,
@@ -122,7 +131,7 @@
             var id = $("#id").val();
             console.log(data)
             $.ajax({
-                url:'/admin/courses/update/'+id,
+                url:'/teacher/courses/update/'+id,
                 type:'POST',
                 data: data,
                 processData: false,
