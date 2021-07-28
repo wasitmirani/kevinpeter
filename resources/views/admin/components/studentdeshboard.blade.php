@@ -8,6 +8,7 @@
             <div class="my-4 my-md-0">
                 <h3 class="mb-1">{{Auth::user()->name}}</h3>
                 <small>Student</small>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Change Avatar</button>
             </div>
             <div class="ms-md-auto">
                 <a href="{{route('admin.profile')}}" class="btn btn-primary btn-lg btn-icon">
@@ -114,4 +115,30 @@
     </div>
 
     </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Update Avatar</h5>
+              <h2 id="imageError"></h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="editAvatarForm">
+                  <input class="form-control" name="image" type="file">
+                  <input type="hidden" " name="id">
+    
+            </div>
+            <div class="modal-footer">
+    
+    
+              <button type="submit" class="btn btn-primary" id="editAvatarBtn" data-id="{{Auth::user()->id}}">Save changes</button>
+            </form>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     <!-- ./ content -->

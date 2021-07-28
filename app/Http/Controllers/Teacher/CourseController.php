@@ -14,15 +14,10 @@ use Illuminate\Support\Facades\Auth;
 class CourseController extends Controller
 {
     public function index(){
+        
         $user = Auth::user();
         $id = $user->id;
-
-
-            $courses = Course::with('teachers')->with('category')->where('teacher_id',$id)->get();
-
-
-
-
+        $courses = Course::with('teachers')->with('category')->where('teacher_id',$id)->get();
         return view('admin.teacherpages.courses.index',compact('courses'));
     }
 

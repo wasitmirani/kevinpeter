@@ -23,7 +23,8 @@
       <select class="form-control select2-example" name="category">
         <option value=" ">Category</option>
         @foreach($categories as $category)
-        <option @if($course->category_id ==  $category->id) selected @endif value="{{$category->id}}">{{$category->category}}</option>
+        <option @if($course->category_id ==  $category->id) selected @endif value="{{$category->id}}">
+            {{$category->category}}</option>
         @endforeach
 
     </select>
@@ -87,7 +88,7 @@
 });
 
     $(document).ready(function(){
-        $("#addCourseForm").dropzone();
+
         $.ajaxSetup({
     headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
