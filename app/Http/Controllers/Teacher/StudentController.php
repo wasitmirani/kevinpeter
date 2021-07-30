@@ -19,7 +19,8 @@ class StudentController extends Controller
     }
 
     public function studentDetail($id){
-        $student = Enrollment::with('course')->with('student')->where([['teacher_id','=',Auth::user()->id],['id','=',$id]])->first();
+        $student = Enrollment::with('course')->with('student')->where('id',$id)->first();
+
         return view('admin.teacherpages.courses.detail',compact('student'));
 
 

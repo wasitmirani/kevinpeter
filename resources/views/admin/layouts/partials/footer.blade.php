@@ -27,12 +27,14 @@
 <script src="{{asset('dist/js/examples/dashboard.js')}}"></script>
 
 <!-- Main Javascript file -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="{{asset('dist/js/app.min.js')}}"></script>
 <script src="{{asset('libs/datatable/datatables.min.js')}}"></script>
 <script src="{{asset('libs/ckeditor5/ckeditor.js')}}"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="{{asset('libs/select2/js/select2.min.js')}}"></script>
-<script src="{{asset('libs/dropzone/dropzone.js')}}"></script>
+
 
 @yield('scripts')
 

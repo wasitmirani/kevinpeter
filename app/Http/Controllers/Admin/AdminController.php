@@ -89,7 +89,7 @@ class AdminController extends Controller
         $profile->email = $request->email;
         $profile->role_id = $request->role;
 
-        if($user->save()){
+        if($profile->save()){
 
             return response()->json('Profile Updated Successfully');
         }else{
@@ -140,6 +140,7 @@ class AdminController extends Controller
 
        $keyword = $request->keyword;
        $result = User::where('name','=',$keyword)->get();
+
        return response()->json($result);
     }
 }

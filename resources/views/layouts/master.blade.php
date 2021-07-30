@@ -2,11 +2,11 @@
 <html lang="en">
 	<head>
 		<!-- Required meta tags -->
-	@include('layouts.partials.meta')
-		<title>Kevin Peter Jones Music School</title>
+@include('layouts.partials.meta')
+
 	</head>
 	<body>
-		<!-- Header Begins here -->
+
 @include('layouts.partials.header')
 <div class="slider-content">
     <div class="slider-wrapper">

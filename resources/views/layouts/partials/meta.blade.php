@@ -11,4 +11,4 @@
     <link rel="stylesheet" href="{{asset('libs/prism/prism.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('dist/css/bootstrap-docs.css')}}" type="text/css">
 
-    <link rel="stylesheet" href="{{asset('css/app.css')}}"
+
