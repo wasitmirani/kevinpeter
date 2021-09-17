@@ -91,6 +91,10 @@ h2.heading-three{
   justify-content: center;
   padding: 30px 0 !important;
 }
+.inner_header{
+    position:relative !important;
+    background-color: #000;
+}
 .header-wrapper .header {
   position: relative;
   display: block;

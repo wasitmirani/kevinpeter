@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,19 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/search/courses', [App\Http\Controllers\HomeController::class, 'searchcourses'])->name('search.course');
+Route::post('/add/cart',[CartController::class,'addCart'])->name('add.cart');
+
+Route::middleware(['auth'])->group(function(){
+
+    Route::get('/checkout/create', ['as'=>'home','uses'=>'CheckoutController@index'])->name('checkout.create');
+    Route::post('order-post', ['as'=>'order-post','uses'=>'CheckoutController@orderPost']);
+
+
+
+});
+
+
 
 
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
@@ -134,4 +148,5 @@ Route::get('about',[App\Http\Controllers\HomeController::class,'abouttUsPage'])-
 Route::get('class',[App\Http\Controllers\HomeController::class,'classPage'])->name('classes');
 Route::get('enroll/now/{id}',[App\Http\Controllers\HomeController::class,'enrollForm'])->name('enroll.form');
 Route::post('enroll/now',[App\Http\Controllers\HomeController::class,'enrollNow'])->name('enroll.now');
+
 

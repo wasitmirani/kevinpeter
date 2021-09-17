@@ -41,6 +41,28 @@ class HomeController extends Controller
 
     }
 
+    public function searchcourses(Request $request){
+
+        $course = "";
+        $search = $request->title;
+
+        if(!empty($search)) {
+            $course = Course::query();
+            $course->orWhere("course_title", "LIKE", "%{$request->title}%")->with('category')->with('teachers');
+            $courses = $course->get();
+            return view('frontend.searchresult',compact('courses','search'));
+        }
+        else{
+            $courses = "";
+            return view('frontend.searchresult',compact('courses','search'));
+
+        }
+
+
+
+
+    }
+
 
     public function contactUsPage(){
 

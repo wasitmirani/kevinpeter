@@ -1,4 +1,9 @@
+@if(Request::is('home'))
 <div class="header-wrapper headline">
+@else
+    <div class="header-wrapper headline inner_header">
+@endif
+    {{-- {{ HTML::linkRoute('home', array('class' => ? ' header-wrapper headline' : 'header-wrapper headline inner_header')) }} --}}
     <div class="header">
         <div class="container">
             <div class="row">
@@ -19,7 +24,7 @@
                                 <li><a href="#">About Us          </a></li>
                                 <li><a href="#">Our Teachers     </a></li>
                                 <li><a href="#">Classes          </a></li>
-                                <li><a href="#">Contact Us   </a></li>
+
                                 @guest
                                 @if (Route::has('login'))
                                 <li><a href="{{route('login')}}">Login  </a></li>
@@ -30,13 +35,16 @@
                                 @endif
                             @else
                             <li><a href="{{route('admin.dashboard')}}">{{Auth::user()->name}}</a></li>
-                            <li><a " href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                              document.getElementById('logout-form').submit();">Logout</a>
-                                               <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                @csrf
-                                            </form>
-                                              </li>
+                            {{-- <li>
+                                <a href="{{route('admin.dashboard')}}">Dashboard</a>
+                            </li> --}}
+                            <li>
+                                <a  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                             </li>
+
                             @endguest
 
                             </ul>
