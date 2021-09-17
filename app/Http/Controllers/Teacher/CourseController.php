@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Auth;
 class CourseController extends Controller
 {
     public function index(){
-        
+
         $user = Auth::user();
         $id = $user->id;
         $courses = Course::with('teachers')->with('category')->where('teacher_id',$id)->get();
@@ -132,7 +132,7 @@ class CourseController extends Controller
     public function joinRequest(){
 
         $requests = Enrollment::where('teacher_id',Auth::user()->id)->get();
-        return view('admin.teacherPages.courses.requests',compact('requests'));
+        return view('admin.teacherpages.courses.requests',compact('requests'));
 
     }
 
