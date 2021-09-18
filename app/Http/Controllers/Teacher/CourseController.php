@@ -78,13 +78,14 @@ class CourseController extends Controller
 
         if ($request->hasfile('file')) {
 
-            foreach($request->file as $data){
+              foreach($request->file as $data){
+                 $name = !empty($request->title) ? $request->title : config('app.name');
+                 $name = Str::slug($name, '-')  . "-" . time() . '.' . $request->image->extension();
+                 $request->image->move(public_path("/admin/courses/images/"), $name);
 
+000
             }
-            // $name = !empty($request->title) ? $request->title : config('app.name');
 
-            // $name = Str::slug($name, '-')  . "-" . time() . '.' . $request->image->extension();
-            // $request->image->move(public_path("/admin/courses/images/"), $name);
 
         }
 
