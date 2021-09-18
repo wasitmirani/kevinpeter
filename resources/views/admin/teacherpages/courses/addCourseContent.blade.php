@@ -8,9 +8,9 @@
 </div>
 <form class="row g-3" id="addCourseContent"  enctype="multipart/form-data" >
 
-    <div class="col-md-6 form-group">
+    <div class="col-md-12 form-group">
         <label for="inputEmail4" class="form-label">Select Course</label>
-        <select class="form-control">
+        <select class="form-control" name="course_id">
             <option value="">Select Course</option>
             @foreach ($courses as $course)
             <option value="{{ $course->id }}">{{ $course->course_title }}</option>
