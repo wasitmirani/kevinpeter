@@ -56,6 +56,7 @@
 
          @endif
       </div>
+
     <div class="col-12">
       <label for="inputAddress2" class="form-label">Description</label>
       @if(isset($course))
@@ -94,6 +95,17 @@
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
 });
+
+
+
+
+//   $('.btn').on('click', function() {
+//   setTimeout(function() {
+//     	alert('Hi');
+//     }, 500)
+//   });
+
+
 //Add Course
         $('#addCourseForm').on('submit',function(e){
             e.preventDefault()
@@ -159,5 +171,21 @@
         })
 
     })
+</script>
+<script>
+
+    $('#addFile').on('click', function() {
+    var  row = "";
+    row +="<div><input type='file' name='file[]'  class='form-control filefield'><button class='btn btn-primary close' id='remove' type='button'>remove</button></div>";
+    $("#files").append(row)
+  });
+
+  $('#remove').on('click', function() {
+      alert('hi')
+
+  });
+
+ });
+
 </script>
 @endsection

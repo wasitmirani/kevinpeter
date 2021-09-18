@@ -1,4 +1,4 @@
-@if(Request::is('home'))
+@if(Request::is('/'))
 <div class="header-wrapper headline">
 @else
     <div class="header-wrapper headline inner_header">

@@ -103,6 +103,8 @@ Route::middleware(['auth'])->prefix('teacher')->name('teacher.')->group(function
         Route::get('course/list',[App\Http\Controllers\Teacher\CourseController::class,'index'])->name('.list');
         Route::get('create/courses',[App\Http\Controllers\Teacher\CourseController::class,'create'])->name('.create');
         Route::post('course/store',[App\Http\Controllers\Teacher\CourseController::class,'store'])->name('.store');
+        Route::get('add/course/content',[App\Http\Controllers\Teacher\CourseController::class,'courseContent'])->name('.content');
+        Route::post('/course/content',[App\Http\Controllers\Teacher\CourseController::class,'addCourseContent'])->name('.post.content');
         Route::get('course/show',[App\Http\Controllers\Teacher\CourseController::class,'show'])->name('.show');
         Route::get('courses/edit/{id}',[App\Http\Controllers\Teacher\CourseController::class,'edit'])->name('.edit');
         Route::post('courses/update/{id}',[App\Http\Controllers\Teacher\CourseController::class,'updateCourse'])->name('.update');

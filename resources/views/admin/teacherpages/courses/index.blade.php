@@ -12,6 +12,7 @@
         <th>Category</th>
         <th>Image</th>
         <th>Action</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +29,7 @@
             <a href="{{route('teacher.course.edit',$course->id)}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
             <a type="button" class="dltCourseBtn" data-id="{{$course->id}}"><i class="fa fa-trash" aria-hidden="true"></i></a>
         </td>
+        <td><a href="{{ route('teacher.course.content') }}" class="btn btn-primary">Add Course Content</a></td>
       </tr>
     @endforeach
       ...

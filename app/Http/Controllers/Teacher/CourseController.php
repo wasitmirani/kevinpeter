@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Enrollment;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Models\CourseContent;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -45,6 +46,10 @@ class CourseController extends Controller
             $request->image->move(public_path("/admin/courses/images/"), $name);
 
         }
+        if(!is_null($request->file)) {
+             $files = json_encode($request->file);
+
+        }
 
        $store =  Course::create([
             'course_title' => $request->title,
@@ -52,8 +57,12 @@ class CourseController extends Controller
             'price' => $request->price,
             'teacher_id' => Auth::user()->id,
             'category_id' => $request->category,
-            'image' => $name
+            'image' => $name,
+
         ]);
+
+
+
         if($store){
 
             return response()->json('Course Added Successfully');
@@ -63,6 +72,36 @@ class CourseController extends Controller
 
 
 
+
+    }
+    public function addCourseContent(Request $request){
+
+        if ($request->hasfile('file')) {
+
+            foreach($request->file as $data){
+
+            }
+            // $name = !empty($request->title) ? $request->title : config('app.name');
+
+            // $name = Str::slug($name, '-')  . "-" . time() . '.' . $request->image->extension();
+            // $request->image->move(public_path("/admin/courses/images/"), $name);
+
+        }
+
+        // CourseContent::create([
+        //     'course_id' => Auth::user()->id,
+        //     'file' =>
+        // ]);
+
+
+
+
+    }
+
+    public function courseContent(Request $request){
+
+        $courses = Course::where('teacher_id',Auth::user()->id)->get();
+        return view('admin.teacherpages.courses.addCourseContent',compact('courses'));
 
     }
 
