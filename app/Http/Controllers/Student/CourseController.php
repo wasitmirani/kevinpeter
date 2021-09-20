@@ -61,7 +61,7 @@ class CourseController extends Controller
         'user_id' => Auth::user()->id,
         'course_id' => $request->id,
         'teacher_id' => $request->teacher_id,
-        'status' => 3
+        'status' => 2
     ]);
 
 
