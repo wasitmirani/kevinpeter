@@ -45,16 +45,6 @@ class CheckoutController extends Controller
                     'email' => $user->email,
                 ]);
 
-                $order = Sale::create([
-
-                    'user_id' => Auth::user()->id,
-                    'seller_id' => $request->teacher_id,
-                    'course_id' => $request->course_id,
-                    'amount' => $request->amount,
-                    
-
-
-                ]);
 
                 return back()->with('success','Subscription is completed.');
             } catch (Exception $e) {

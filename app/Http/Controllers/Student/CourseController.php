@@ -32,6 +32,7 @@ class CourseController extends Controller
  }
 
  public function enrollment(Request $request){
+  
 
     $validate = $request->validate([
         'name' => ['required'],

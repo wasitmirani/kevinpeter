@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Stripe\Charge;
+use Stripe\Stripe;
 use App\Models\User;
 use App\Models\Course;
 use App\Models\Enrollment;
@@ -95,6 +97,17 @@ class HomeController extends Controller
         'price' => 'required',
 
       ]);
+      Stripe::setApiKey(env('STRIPE_SECRET'));
+
+
+      $charge = Charge::create ([
+
+               "amount" => $request->price * 100,
+               "currency" => "usd",
+               "source" => $request->stripeToken,
+               "description" => "Payment From Kevinpeter Music School"
+       ]);
+
 
       $enrolled = Enrollment::create([
         'student_name' => $request->name,
@@ -105,11 +118,11 @@ class HomeController extends Controller
         'user_id' => Auth::user()->id,
         'course_id' => $request->id,
         'teacher_id' => $request->teacher_id,
-        'status' => 1
+        'status' => 2
       ]);
       if($enrolled){
 
-        return back()->with('message','Your Enrollment Is Pending');
+        return back()->with('message','You Are Enroll Successfully');
 
       }else{
 
