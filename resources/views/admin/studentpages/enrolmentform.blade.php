@@ -28,6 +28,7 @@
             <input type="text" class="form-control" id="price" value={{$course->price}}>
         </div>
 
+
         <button type="button" data-id="{{$course->id}}" id="enrollFormBtn" class="btn btn-primary">Submit</button>
     </form>
 </div>
