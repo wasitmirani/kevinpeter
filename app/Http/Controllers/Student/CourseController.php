@@ -60,16 +60,15 @@ class CourseController extends Controller
         'category' => $request->category,
         'user_id' => Auth::user()->id,
         'course_id' => $request->id,
-
         'teacher_id' => $request->teacher_id,
-        'status' => 1
+        'status' => 3
     ]);
 
 
 
     if($enrollment){
 
-        return response()->json('You are enroll now');
+        return back()->with('message','Enrollment Successfull');
 
     }else{
         return response()->json('Failed To Enroll');

@@ -1,5 +1,6 @@
 @extends('admin.layouts.app')
 @section('content')
+<div class="content ">
 <h4>Enrolment Form</h4>
 <div class="card-body">
     <div id="message"></div>
@@ -88,7 +89,7 @@
     </form>
 </div>
 
-
+</div>
 
 @endsection
 @section('scripts')
