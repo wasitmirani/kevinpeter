@@ -265,8 +265,8 @@
                             <div class="row">
                                 <div class="col-lg-7">
                                     <ul class="list-unstyled">
-                                        {{-- <li><img src="{{asset('frontend/assets/images/icon1.png')}}" alt="">3 Months Course</li>
-                                        <li><img src="{{asset('frontend/assets/images/icon2.png')}}" alt="">Start From 300$</li> --}}
+                                        {{-- <li><img src="{{asset('frontend/assets/images/icon1.png')}}" alt="">3 Months Course</li>--}}
+                                        <li><img src="{{asset('frontend/assets/images/icon2.png')}}" alt=""> {{ $course->price }}$</li>
                                     </ul>
                                 </div>
                                 <div class="col-lg-5 float-right dis-flex-end">
