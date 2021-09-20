@@ -12,11 +12,10 @@
         <div class="dropdown">
             <a href="#" class="d-flex align-items-center" data-bs-toggle="dropdown">
                 <div class="avatar me-3">
-                    @if (Auth::user()->image != null)
+                    @if(!empty(Auth::user()->image))
                     <img src="{{asset('assets/images/user/'.Auth::user()->image)}}" class="rounded-circle" alt="image">
                     @else
-                    <img src="{{asset('assets/images/user/man_avatar3.jpg')}}" class="rounded-circle" alt="image">
-
+                    <img src="{{asset('admin/user/images/profile.jpg')}}" class="rounded" width="40" alt="...">
                     @endif
 
                 </div>

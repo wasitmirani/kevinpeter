@@ -6,14 +6,8 @@
           <tr>
             <th>Course</th>
             <th>Price</th>
-
-
-
-
             <th>Action</th>
-
           </tr>
-
         </thead>
         @foreach($sales as $sale)
         <tr>

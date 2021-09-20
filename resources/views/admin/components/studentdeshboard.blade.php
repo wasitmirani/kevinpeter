@@ -3,7 +3,12 @@
     <div class="buyer-profile-cover bg-image mb-4" data-image="">
         <div class="container d-flex align-items-center justify-content-center h-100 flex-column flex-md-row text-center text-md-start">
             <div class="avatar avatar-xl me-3">
-                <img src="{{asset('assets/images/user/'.Auth::user()->image)}}" class="rounded-circle" alt="...">
+
+                @if(!empty(Auth::user()->image))
+                <img src="{{asset('assets/images/user/'.Auth::user()->image)}}" class="rounded-circle" alt="image">
+                @else
+                <img src="{{asset('admin/user/images/profile.jpg')}}" class="rounded" width="40" alt="...">
+                @endif
             </div>
             <div class="my-4 my-md-0">
                 <h3 class="mb-1">{{Auth::user()->name}}</h3>
@@ -128,11 +133,11 @@
               <form id="editAvatarForm">
                   <input class="form-control" name="image" type="file">
                   <input type="hidden" " name="id">
-    
+
             </div>
             <div class="modal-footer">
-    
-    
+
+
               <button type="submit" class="btn btn-primary" id="editAvatarBtn" data-id="{{Auth::user()->id}}">Save changes</button>
             </form>
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
@@ -140,5 +145,5 @@
           </div>
         </div>
       </div>
-      
+
     <!-- ./ content -->

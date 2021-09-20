@@ -77,7 +77,11 @@
                     <div>
                         <div class="d-flex align-items-center mb-3">
                             <div class="avatar me-3">
+                                @if(!empty($teacher->image))
                                 <img src="{{asset('assets/images/user/'.$teacher->image)}}" class="rounded-circle" alt="image">
+                                @else
+                                <img src="{{asset('admin/user/images/profile.jpg')}}" class="rounded" width="40" alt="...">
+                                @endif
                             </div>
                             <div>
                                 <h5 class="mb-1">{{$teacher->name}}</h5>
@@ -245,6 +249,7 @@
                             </td>
                             <td>
                                 <a href="#">
+
                                     <img src="{{asset('admin/courses/images/'.$course->image)}}" class="rounded" width="40" alt="...">
                                 </a>
                             </td>

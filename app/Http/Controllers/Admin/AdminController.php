@@ -19,7 +19,7 @@ class AdminController extends Controller
             $courses = Course::with('teachers')->orderby('id','desc')->latest()->get();
             $totalCourses = Course::with('teachers')->count();
             $totalEnrollments = Enrollment::all()->count();
-            $teachers = User::where('role_id','3')->get();
+            $teachers = User::where('role_id','3')->orderby('id','desc')->get()->take(6);
             return view('admin.pages.dashboard',compact('courses','totalCourses','totalEnrollments','teachers'));
 
         }
