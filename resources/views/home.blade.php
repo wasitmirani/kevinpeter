@@ -260,7 +260,7 @@
                     <div class="item">
                         <div class="box">
                             <div class="img-box"><img src="{{asset('admin/courses/images/'.$course->image)}}" class="img-fluid" alt=""></div>
-                            <h2 class="heading-two">{{$course->course_title}}<span>@if(isset($course->category->category)){{$course->category->category}}@endif</span></h2>
+                            <h2 class="heading-two"><a href="{{ route('student.course.detail',$course->id) }}">{{ $course->course_title}}</a><span>@if(isset($course->category->category)){{$course->category->category}}@endif</span></h2>
                             <p class="para-two">{!! $course->description !!}</p>
                             <div class="row">
                                 <div class="col-lg-7">
@@ -324,7 +324,7 @@
                     </div> --}}
                     <!-- 3rd -->
                     <!-- 4th -->
-                    <div class="item">
+                    {{-- <div class="item">
                         <div class="box">
                             <div class="img-box"><img src="{{asset('frontend/assets/images/1.jpg')}}" class="img-fluid" alt=""></div>
                             <h2 class="heading-two">JOHN DOE <span>Guitar Teacher</span></h2>
@@ -341,7 +341,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- 4th -->
                 </div>
             </div>

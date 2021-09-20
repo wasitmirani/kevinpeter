@@ -93,6 +93,15 @@ class CourseController extends Controller
 
     return view('admin.studentpages.coursecontent',compact('contents'));
 
- }
 
+
+ }
+public function course_detail($id){
+
+
+    $course = Course::with('category')->with('teachers')->where('id',$id)->first();
+    return view('admin.studentpages.coursedetail',compact('course'));
+
+
+}
 }
