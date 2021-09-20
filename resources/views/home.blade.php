@@ -259,14 +259,14 @@
                     @foreach($courses as $course)
                     <div class="item">
                         <div class="box">
-                            <div class="img-box"><img src="{{asset('frontend/assets/images/1.jpg')}}" class="img-fluid" alt=""></div>
+                            <div class="img-box"><img src="{{asset('admin/courses/images/'.$course->image)}}" class="img-fluid" alt=""></div>
                             <h2 class="heading-two">{{$course->course_title}}<span>@if(isset($course->category->category)){{$course->category->category}}@endif</span></h2>
                             <p class="para-two">{!! $course->description !!}</p>
                             <div class="row">
                                 <div class="col-lg-7">
                                     <ul class="list-unstyled">
-                                        <li><img src="{{asset('frontend/assets/images/icon1.png')}}" alt="">3 Months Course</li>
-                                        <li><img src="{{asset('frontend/assets/images/icon2.png')}}" alt="">Start From 300$</li>
+                                        {{-- <li><img src="{{asset('frontend/assets/images/icon1.png')}}" alt="">3 Months Course</li>
+                                        <li><img src="{{asset('frontend/assets/images/icon2.png')}}" alt="">Start From 300$</li> --}}
                                     </ul>
                                 </div>
                                 <div class="col-lg-5 float-right dis-flex-end">
