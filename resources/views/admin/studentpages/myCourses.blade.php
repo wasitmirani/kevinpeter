@@ -33,9 +33,9 @@
                             <td>${{$enrolled->price}}</td>
 
                             <td class="text-end">
-                                <button class="btn btn-outline-danger flex-shrink-0">
-                                    <i class="bi bi-trash"></i>
-                                </button>
+                                <a class="btn btn-outline-danger flex-shrink-0" href="{{ route('student.course.content',$enrolled->course_id) }}">
+                                     Course Content
+                                </a>
                             </td>
                         </tr>
                         @endforeach
@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    {{-- <div class="col-md-4">
         <div class="card mb-4">
             <div class="card-body">
                 <h6 class="card-title mb-4">Price</h6>
@@ -86,7 +86,7 @@
             <a href="#" class="btn btn-danger">All Clear</a>
             <a href="#" class="btn btn-primary">Checkout</a>
         </div>
-    </div>
+    </div> --}}
 </div>
 
 @endsection

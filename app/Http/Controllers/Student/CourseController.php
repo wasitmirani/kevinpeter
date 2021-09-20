@@ -7,6 +7,7 @@ use Stripe\Stripe;
 use App\Models\Course;
 use App\Models\Enrollment;
 use Illuminate\Http\Request;
+use App\Models\CourseContent;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -84,6 +85,15 @@ class CourseController extends Controller
     $myCourses = Enrollment::with('course')->where('user_id',Auth::user()->id)->get();
 
     return view('admin.studentpages.myCourses',compact('myCourses'));
+ }
+
+
+ public function course_content($id){
+
+    $contents = CourseContent::where('course_id',$id)->with('course')->get();
+
+    return view('admin.studentpages.coursecontent',compact('contents'));
+
  }
 
 }

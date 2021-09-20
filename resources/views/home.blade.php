@@ -198,16 +198,15 @@
             <div class="col-lg-10 m-auto">
                 <div class="row bage">
                     <div class="col-lg-4">
-                        <h2 class="heading-three">We'll help you book
-                        your ideal teacher!</h2>
+                        <h2 class="heading-three">Learn Anything From Anywhere</h2>
 
                     </div>
                     <div class="col-lg-8">
                         <form action="{{ route('search.course') }}" method="post" >
                             {{ csrf_field() }}
                             <ul class="list-unstyled">
-                                <li class="loc"><input type="text" placeholder="Zip Code" name="title"></li>
-                                <li><button type="submit" class="btn">GET STARTED</button></li>
+                                <li class="loc"><input type="text" placeholder="Search Courses" name="title"></li>
+                                <li><button type="submit" class="btn">Search </button></li>
                             </ul>
                         </form>
                     </div>

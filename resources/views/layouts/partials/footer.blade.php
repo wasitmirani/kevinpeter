@@ -1,3 +1,4 @@
+
 <footer class="headline">
 	<div class="footer-logo"><img src="/assets/images/footer-logo.png" class="img-fluid" alt=""></div>
 	<div class="container">
@@ -37,10 +38,10 @@
 						0000 1234 567 89
 					loremipsum@dummy.com</a></li>
 				</ul>
-				
+
 			</div>
 		</div>
-		
+
 	</div>
 	<div class="copyright">
 		<div class="container">
