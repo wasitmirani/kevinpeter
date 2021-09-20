@@ -116,6 +116,17 @@
 
             </li>
             <li>
+                <a  href="{{route('admin.course.sale.detail')}}" class='@if (request()->route()->getName()=="admin.course.sale.detail")
+                    active
+                @endif"'>
+                    <span class="nav-link-icon">
+                        <i class="far fa-address-book"></i>
+                    </span>
+                    <span>Sales Detail</span>
+                </a>
+
+            </li>
+            <li>
                 <a href="#">
                     <span class="nav-link-icon">
                         <i class="fas fa-external-link-alt"></i>

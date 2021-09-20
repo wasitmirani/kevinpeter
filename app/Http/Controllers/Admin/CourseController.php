@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Models\User;
 use App\Models\Course;
 use App\Models\Category;
+use App\Models\Enrollment;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -121,6 +123,16 @@ class CourseController extends Controller
         }
 
 
+    }
+
+    public function sale_detail(){
+
+
+        $sales = Enrollment::with('student')->with('course')->whereDate('created_at',Carbon::today()->format('Y-m-d'))->get();
+
+        $stripe = new \Stripe\StripeClient("sk_test_51GLXijEAd9vjELXQilYL08HtchvFbe24jlNa9ek8W1PzHcxjzD98k3V1bnQ8zCpNUcToU8wqpujnQ6LLOiUYeRMb00V5JujLjo");
+
+        return view('admin.pages.sales',compact('sales'));
     }
 
     public function deleteCourse($id){

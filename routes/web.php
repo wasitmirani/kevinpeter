@@ -55,6 +55,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
         Route::get('courses/edit/{id}',[App\Http\Controllers\Admin\CourseController::class,'edit'])->name('.edit');
         Route::post('courses/update/{id}',[App\Http\Controllers\Admin\CourseController::class,'updateCourse'])->name('.update');
         Route::post('courses/delete/{id}',[App\Http\Controllers\Admin\CourseController::class,'deleteCourse'])->name('.delete');
+        Route::get('sale',[App\Http\Controllers\Admin\CourseController::class,'sale_detail'])->name('.sale.detail');
 
     });
     Route::name('teachers')->group(function(){
@@ -122,7 +123,7 @@ Route::middleware(['auth'])->prefix('teacher')->name('teacher.')->group(function
     //student
     Route::name('student')->group(function(){
         Route::get('student/list',[App\Http\Controllers\Teacher\StudentController::class,'index'])->name('.list');
-        Route::get('student/detail/{id}',[App\Http\Controllers\Teacher\StudentController::class,'studentDetail'])->name('.detail');
+
 
     });
 
@@ -137,7 +138,7 @@ Route::middleware(['auth'])->prefix('student')->name('student.')->group(function
         Route::post('course/enroll',[App\Http\Controllers\Student\CourseController::class,'enrollment'])->name('.enroll');
         Route::get('my/courses',[App\Http\Controllers\Student\CourseController::class,'myCourses'])->name('.my.courses');
         Route::get('/course/content/{id}',[App\Http\Controllers\Student\CourseController::class,'course_content'])->name('.content');
-        Route::get('course/detail/{id}',[App\Http\Controllers\Student\CourseController::class,'course_detail'])->name('.detail');
+
 
 
     });
@@ -150,5 +151,5 @@ Route::get('about',[App\Http\Controllers\HomeController::class,'abouttUsPage'])-
 Route::get('class',[App\Http\Controllers\HomeController::class,'classPage'])->name('classes');
 Route::get('enroll/now/{id}',[App\Http\Controllers\HomeController::class,'enrollForm'])->name('enroll.form');
 Route::post('enroll/now',[App\Http\Controllers\HomeController::class,'enrollNow'])->name('enroll.now');
-
+Route::get('course/detail/{id}',[App\Http\Controllers\Student\CourseController::class,'course_detail'])->name('course.detail');
 
