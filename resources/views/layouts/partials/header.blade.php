@@ -1,7 +1,7 @@
 @if(Request::is('/'))
 <div class="header-wrapper headline">
 @else
-    <div class="header-wrapper headline inner_header">
+    <div class="header-wrapper headline inner_header" style="background-color: #000">
 @endif
     {{-- {{ HTML::linkRoute('home', array('class' => ? ' header-wrapper headline' : 'header-wrapper headline inner_header')) }} --}}
     <div class="header">
