@@ -20,18 +20,24 @@
 
     </div>
     <div class="col-md-6 form-group">
+        <label for="inputEmail4" class="form-label">Lesson Title</label>
+        <input name="lessonTitle[]" class="form-control" id="lessonTitle">
+    </div>
+    <div class="col-md-3 form-group">
         <label for="inputEmail4" class="form-label">Add Files ('text or video')</label>
 
         <input type="file" name="file[]" class="form-control"   id="inputEmail4">
 
 
     </div>
-    <div class="col-md-6 form-group">
+    <div class="col-md-3 form-group">
+
+
         <button class="btn btn-primary " id="addMore" type="button"
         >Add More</button>
     </div>
 
-    <div class="col-md-6 form-group" id="files"></div>
+    <div  id="files"></div>
     <div>
         <button class="btn btn-primary" type="submit">Add Files</button>
     </div>
@@ -57,12 +63,13 @@
                 data: data,
                 processData: false,
                 contentType: false,
-                success:function(res){
-                    console.log(res)
+                success:function(message){
+
+                    $('#message').fadeIn().append("<p class='alert alert-warning alert-dismissible fade show'>"+message+"<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button><p>");
 
                 },
                 error:function(err){
-                    console.log(err)
+                    $('#message').fadeIn().append("<p class='alert alert-warning alert-dismissible fade show'>"+err+"<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button><p>");
 
                 }
             })
@@ -77,7 +84,7 @@
 
         $("#addMore").on('click',function(){
             var row = "";
-            row +='<div><input type="file" name="file[]" class="form-control "   id="inputEmail4"><button class="btn btn-primary remove" type="button">Remove</button></div>';
+            row +='<div class="col-md-6 form-group"><label for="inputEmail4" class="form-label">Lesson Title</label><input name="lessonTitle[]" class="form-control" id="lessonTitle"></div><div class="col-md-3 form-group"><label>Add File</label><input type="file" name="file[]" class="form-control "   id="inputEmail4"></div><div class="col-md-3 form-group"><button class="btn btn-primary remove" type="button">Remove</button></div>';
             $("#files").append(row)
 
         })

@@ -12,7 +12,7 @@
 
                 <p class="alert alert-success">{{Session::get('message')}}</p>
 
-          @endif
+               @endif
                 <form id="enrollForm" action="{{route('enroll.now')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row">

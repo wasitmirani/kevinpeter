@@ -13,6 +13,7 @@
         <th>Image</th>
         <th>Action</th>
         <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -30,6 +31,7 @@
             <a type="button" class="dltCourseBtn" data-id="{{$course->id}}"><i class="fa fa-trash" aria-hidden="true"></i></a>
         </td>
         <td><a href="{{ route('teacher.course.content') }}" class="btn btn-primary">Add Course Content</a></td>
+        <td><a href="{{ route('teacher.course.list.content',$course->id) }}" class="btn btn-primary">Course Content</a></td>
       </tr>
     @endforeach
       ...

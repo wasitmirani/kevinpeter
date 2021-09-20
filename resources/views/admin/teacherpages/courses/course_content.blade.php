@@ -4,23 +4,24 @@
     <thead>
       <tr>
         <th>Course Title</th>
-        <th>Category</th>
-         <th>File</th>
-        <th>Action</th>
+          <th>Lesson Title</th>
+         <th>Download Lesson</th>
+        {{-- <th>Action</th> --}}
 
       </tr>
     </thead>
     <tbody>
-    @foreach($courses as $course)
+    @foreach($contents as $content)
       <tr>
-        <td></td>
-        <td> </td>
-        <td></td>
+        <td>{{ $content->course->course_title }}</td>
+        <td>{{ $content->lessonTitle }}</td>
+        <td><a href="{{ route('teacher.course.download.content',$content->id) }}"><i class="fas fa-download"></i></a> </td>
 
+{{--
         <td>
             <a href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
             <a type="button" class="dltCourseBtn" data-id=""><i class="fa fa-trash" aria-hidden="true"></i></a>
-        </td>
+        </td> --}}
 
       </tr>
     @endforeach

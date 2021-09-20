@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\User;
 use App\Models\Category;
+use App\Models\CourseContent;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -22,5 +23,9 @@ class Course extends Model
 
     public function enrollments(){
         return $this->hasMany(Enrollment::class);
+    }
+
+    public function contents(){
+        return $this->hasMany(CourseContent::class);
     }
 }

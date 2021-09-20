@@ -76,27 +76,51 @@ class CourseController extends Controller
     }
     public function addCourseContent(Request $request){
 
-        if ($request->hasfile('file')) {
 
-              foreach($request->file as $data){
-                 $name = !empty($request->title) ? $request->title : config('app.name');
-                 $name = Str::slug($name, '-')  . "-" . time() . '.' . $request->image->extension();
-                 $request->image->move(public_path("/admin/courses/images/"), $name);
 
-000
-            }
+        $arr = [];
+        foreach($request->file as $key =>$file){
+
+            $string = Str::random(16);
+            $ext = $file->guessExtension();
+            $file_name = $string . '.' .  $ext;
+            $filepath = 'uploads/' . Auth::user()->name . '/' . $file_name;
+            $file->move(('uploads/' . Auth::user()->name), $file_name);
+            array_push($arr, [$file_name, $filepath]);
+
+
+        CourseContent::create([
+            'course_id' => $request->course_id,
+            'lessonTitle' => $request->lessonTitle[$key],
+            'file' => $filepath
+        ]);
+
 
 
         }
-
-        // CourseContent::create([
-        //     'course_id' => Auth::user()->id,
-        //     'file' =>
-        // ]);
+        if(!is_null($arr)){
+            return response()->json('Course Content Uploaded Successfully');
 
 
+        }else{
+            return response()->json('Something Went Wrong');
+        }
 
 
+
+    }
+
+
+    public function download_content($id){
+        $file = CourseContent::where('id',$id)->first();
+        return response()->download(public_path($file->file));
+    }
+
+    public function listCourseContent($id){
+
+        $contents = CourseContent::with('course')->where('course_id',$id)->get();
+
+        return view('admin.teacherpages.courses.course_content',compact('contents'));
     }
 
     public function courseContent(Request $request){
@@ -167,6 +191,7 @@ class CourseController extends Controller
 
 
     }
+
 
 
     public function joinRequest(){

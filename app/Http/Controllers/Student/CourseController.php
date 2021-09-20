@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Student;
 
+use Stripe\Charge;
+use Stripe\Stripe;
 use App\Models\Course;
 use App\Models\Enrollment;
 use Illuminate\Http\Request;
@@ -38,17 +40,31 @@ class CourseController extends Controller
         'title' => ['required'],
     ]);
 
+    Stripe::setApiKey(env('STRIPE_SECRET'));
+
+
+    $charge = Charge::create ([
+
+             "amount" => $request->price * 100,
+             "currency" => "usd",
+             "source" => $request->stripeToken,
+             "description" => "Test payment from mojavilms."
+     ]);
+
     $enrollment = Enrollment::create([
         'course_title' => $request->title,
         'student_name' => $request->name,
         'teacher' => $request->teacher,
-        'price' => $request->price,
+        'price' => $request->price * 100,
         'category' => $request->category,
         'user_id' => Auth::user()->id,
         'course_id' => $request->id,
+
         'teacher_id' => $request->teacher_id,
         'status' => 1
     ]);
+
+
 
     if($enrollment){
 

@@ -21,14 +21,14 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::post('/search/courses', [App\Http\Controllers\HomeController::class, 'searchcourses'])->name('search.course');
 Route::post('/add/cart',[CartController::class,'addCart'])->name('add.cart');
 
-Route::middleware(['auth'])->group(function(){
+// Route::middleware(['auth'])->group(function(){
 
-    Route::get('/checkout/create', ['as'=>'home','uses'=>'CheckoutController@index'])->name('checkout.create');
-    Route::post('order-post', ['as'=>'order-post','uses'=>'CheckoutController@orderPost']);
+//     Route::get('/checkout/create', ['as'=>'home','uses'=>'CheckoutController@index'])->name('checkout.create');
+//     Route::post('order-post', ['as'=>'order-post','uses'=>'CheckoutController@orderPost']);
 
 
 
-});
+// });
 
 
 
@@ -105,6 +105,8 @@ Route::middleware(['auth'])->prefix('teacher')->name('teacher.')->group(function
         Route::post('course/store',[App\Http\Controllers\Teacher\CourseController::class,'store'])->name('.store');
         Route::get('add/course/content',[App\Http\Controllers\Teacher\CourseController::class,'courseContent'])->name('.content');
         Route::post('/course/content',[App\Http\Controllers\Teacher\CourseController::class,'addCourseContent'])->name('.post.content');
+        Route::get('list/course/content/{id}',[App\Http\Controllers\Teacher\CourseController::class,'listCourseContent'])->name('.list.content');
+        Route::get('download/course/content/{id}',[App\Http\Controllers\Teacher\CourseController::class,'download_content'])->name('.download.content');
         Route::get('course/show',[App\Http\Controllers\Teacher\CourseController::class,'show'])->name('.show');
         Route::get('courses/edit/{id}',[App\Http\Controllers\Teacher\CourseController::class,'edit'])->name('.edit');
         Route::post('courses/update/{id}',[App\Http\Controllers\Teacher\CourseController::class,'updateCourse'])->name('.update');
