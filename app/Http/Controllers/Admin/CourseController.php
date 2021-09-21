@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\User;
 use App\Models\Course;
 use App\Models\Category;
+use Stripe\StripeClient;
 use App\Models\Enrollment;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -130,7 +131,7 @@ class CourseController extends Controller
 
         $sales = Enrollment::with('student')->with('course')->whereDate('created_at',Carbon::today()->format('Y-m-d'))->get();
 
-        $stripe = new \Stripe\StripeClient("sk_test_51GLXijEAd9vjELXQilYL08HtchvFbe24jlNa9ek8W1PzHcxjzD98k3V1bnQ8zCpNUcToU8wqpujnQ6LLOiUYeRMb00V5JujLjo");
+        $stripe = new StripeClient("sk_test_51GLXijEAd9vjELXQilYL08HtchvFbe24jlNa9ek8W1PzHcxjzD98k3V1bnQ8zCpNUcToU8wqpujnQ6LLOiUYeRMb00V5JujLjo");
 
         return view('admin.pages.sales',compact('sales'));
     }
