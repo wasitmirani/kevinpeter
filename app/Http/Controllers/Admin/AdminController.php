@@ -41,6 +41,12 @@ class AdminController extends Controller
 
     }
 
+    public function invoice($id){
+        $sale = Enrollment::with('course')->with('student')->with('teacher')->where('id',$id)->first();
+
+         return view('admin.pages.summary',compact('sale'));
+    }
+
 
     public function profile(){
 

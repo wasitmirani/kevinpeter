@@ -44,7 +44,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
 
     Route::post('search',[App\Http\Controllers\Admin\AdminController::class,'searchCourse'])->name('search.course');
 
-
+    Route::get('invoice/{id}',[App\Http\Controllers\Admin\AdminController::class,'invoice'])->name('invoice');
 
     Route::name('course')->group(function(){
 

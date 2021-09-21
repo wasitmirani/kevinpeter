@@ -13,7 +13,7 @@
         <tr>
             <td>{{ $sale->course->course_title }}</td>
             <td>{{ $sale->price }}$</td>
-            <td></td>
+            <td><a class="bt btn-primary" href="{{ route('admin.invoice',$sale->id) }}"> Invoice</a></td>
         </tr>
         @endforeach()
         <tbody>
