@@ -131,7 +131,7 @@ class CourseController extends Controller
 
         $sales = Enrollment::with('student')->with('course')->whereDate('created_at',Carbon::today()->format('Y-m-d'))->get();
 
-        $stripe = new StripeClient("sk_test_51GLXijEAd9vjELXQilYL08HtchvFbe24jlNa9ek8W1PzHcxjzD98k3V1bnQ8zCpNUcToU8wqpujnQ6LLOiUYeRMb00V5JujLjo");
+        // $stripe = new StripeClient("sk_test_51GLXijEAd9vjELXQilYL08HtchvFbe24jlNa9ek8W1PzHcxjzD98k3V1bnQ8zCpNUcToU8wqpujnQ6LLOiUYeRMb00V5JujLjo");
 
         return view('admin.pages.sales',compact('sales'));
     }
