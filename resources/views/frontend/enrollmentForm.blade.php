@@ -11,6 +11,7 @@
                 <p class="alert alert-success">{{Session::get('message')}}</p>
 
                @endif
+               <p class="error"></p>
 
             <form id="require-validation" action="{{route('enroll.now')}}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
@@ -138,6 +139,7 @@
                 if (response.error) {
                     $('.error')
                         .removeClass('hide')
+                        .addClass('alert alert-danger')
                         .find('.alert')
                         .text(response.error.message);
                 } else {
