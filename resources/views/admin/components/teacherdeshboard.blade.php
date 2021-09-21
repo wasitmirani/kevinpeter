@@ -3,11 +3,10 @@
     <div class="buyer-profile-cover bg-image mb-4" data-image="../../assets/images/tavatar.jpg">
         <div class="container d-flex align-items-center justify-content-center h-100 flex-column flex-md-row text-center text-md-start">
             <div class="avatar avatar-xl me-3">
-                @if(Auth::user()->image == null)
-                <img src="{{asset('images/user/tavatar.jpg')}}" class="rounded-circle" alt="...">
+                @if(!empty(Auth::user()->image))
+                <img src="{{asset('assets/images/user/'.Auth::user()->image)}}" class="rounded-circle" alt="image">
                 @else
-                <img src="{{asset('assets/images/user/'.Auth::user()->image)}}" class="rounded-circle" alt="...">
-
+                <img src="{{asset('admin/user/images/profile.jpg')}}" class="rounded" width="40" alt="...">
                 @endif
             </div>
             <div class="my-4 my-md-0">
