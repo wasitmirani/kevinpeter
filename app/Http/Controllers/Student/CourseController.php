@@ -32,7 +32,7 @@ class CourseController extends Controller
  }
 
  public function enrollment(Request $request){
-  
+
 
     $validate = $request->validate([
         'name' => ['required'],
@@ -78,6 +78,12 @@ class CourseController extends Controller
 
 
  }
+public function sale_detail(){
+    $sales = Enrollment::with('student')->with('course')->whereDate('user_id',$id)->get();
+    return view('admin.studentpages.sales',compact('sales'));
+
+}
+
 
 
  public function myCourses(){

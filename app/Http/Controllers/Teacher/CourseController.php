@@ -74,6 +74,12 @@ class CourseController extends Controller
 
 
     }
+    public function sale_detail($id){
+
+        $sales = Enrollment::with('student')->with('course')->whereDate('teacher_id',$id)->get();
+        return view('admin.teacherpages.sales',compact('sales'));
+
+    }
     public function addCourseContent(Request $request){
 
 

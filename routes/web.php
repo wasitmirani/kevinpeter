@@ -114,6 +114,7 @@ Route::middleware(['auth'])->prefix('teacher')->name('teacher.')->group(function
         Route::post('courses/delete/{id}',[App\Http\Controllers\Teacher\CourseController::class,'deleteCourse'])->name('.delete');
         Route::get('enrollment/request/',[App\Http\Controllers\Teacher\CourseController::class,'joinRequest'])->name('.request');
         Route::post('update/request/status/{id}',[App\Http\Controllers\Teacher\CourseController::class,'updateRequestStatus'])->name('.status');
+        Route::get('sale/{id}',[App\Http\Controllers\Teacher\CourseController::class,'sale_detail']);
 
         //student
 

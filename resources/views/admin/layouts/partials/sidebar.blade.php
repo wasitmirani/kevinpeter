@@ -185,6 +185,17 @@
             </ul>
         </li>
         <li>
+            <a  href="{{route('admin.course.sale.detail')}}" class='@if (request()->route()->getName()=="admin.course.sale.detail")
+                active
+            @endif"'>
+                <span class="nav-link-icon">
+                    <i class="far fa-address-book"></i>
+                </span>
+                <span>Sales Detail</span>
+            </a>
+
+        </li>
+        <li>
             <a href="{{route('admin.students.edit',Auth::user()->id )}}"  class='@if (request()->route()->getName()=="admin.teachers.edit")
                 active
             @endif"'>
@@ -195,6 +206,7 @@
             </a>
 
         </li>
+
 
 
         @endif
@@ -255,6 +267,17 @@
 
                 </li>
             </ul>
+        </li>
+        <li>
+            <a  href="{{route('admin.course.sale.detail')}}" class='@if (request()->route()->getName()=="admin.course.sale.detail")
+                active
+            @endif"'>
+                <span class="nav-link-icon">
+                    <i class="far fa-address-book"></i>
+                </span>
+                <span>Sales Detail</span>
+            </a>
+
         </li>
         <li>
             <a href="{{route('admin.teachers.edit',Auth::user()->id )}}"  class='@if (request()->route()->getName()=="admin.teachers.edit")
